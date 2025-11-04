@@ -151,10 +151,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* CORREÇÃO 1: Adição de prefixos para compatibilidade de gradiente */
+    /* CORREÇÃO 1: Garante a compatibilidade máxima do gradiente */
+    /* Sintaxe antiga com prefixo -webkit- (para Safari/iOS e navegadores baseados em Chrome antigos) */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #b32400), color-stop(100%, #751a00)); 
+    /* Sintaxe moderna com prefixo -webkit- */
     background: -webkit-linear-gradient(145deg, #b32400, #751a00);
+    /* Sintaxe com prefixo -moz- (para Firefox) */
     background: -moz-linear-gradient(145deg, #b32400, #751a00);
+    /* Sintaxe padrão (DEVE VIR POR ÚLTIMO) */
     background: linear-gradient(145deg, #b32400, #751a00); 
+    
     z-index: 9999;
     overflow: hidden;
     transition: opacity 1s ease-out; 
@@ -162,7 +168,7 @@ body {
     box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
 }
 
-/* Textura leve na caixa */
+/* Textura leve na caixa (mantida) */
 .gift-box::before {
     content: "";
     position: absolute;
@@ -176,10 +182,16 @@ body {
 .gift-ribbon-left,
 .gift-ribbon-center {
     position: absolute;
-    /* CORREÇÃO 2: Adição de prefixos para compatibilidade de gradiente */
+    /* CORREÇÃO 2: Garante a compatibilidade máxima do gradiente */
+    /* Sintaxe antiga com prefixo -webkit- */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a30000), color-stop(50%, #ff3c3c), color-stop(100%, #a30000));
+    /* Sintaxe moderna com prefixo -webkit- */
     background: -webkit-linear-gradient(to bottom, #a30000, #ff3c3c, #a30000);
+    /* Sintaxe com prefixo -moz- */
     background: -moz-linear-gradient(to bottom, #a30000, #ff3c3c, #a30000);
+    /* Sintaxe padrão (DEVE VIR POR ÚLTIMO) */
     background: linear-gradient(to bottom, #a30000, #ff3c3c, #a30000); 
+
     box-shadow:
         inset 0 0 15px rgba(255,255,255,0.4),
         inset 0 0 30px rgba(0,0,0,0.4),
@@ -187,7 +199,7 @@ body {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; 
 }
 
-/* Faixa Vertical */
+/* Faixa Vertical (mantida) */
 .gift-ribbon-left {
     top: 0;
     left: 50%;
@@ -197,7 +209,7 @@ body {
     z-index: 10001;
 }
 
-/* Faixa Horizontal */
+/* Faixa Horizontal (mantida) */
 .gift-ribbon-center {
     top: 50%;
     left: 0;
@@ -210,12 +222,11 @@ body {
     align-items: center;
 }
 
-/* Texto central */
+/* Texto central (mantido) */
 .gift-box-message {
     position: absolute;
-    top: 45%; /* <--- AJUSTE PC: Move o ponto de âncora para cima */
+    top: 45%; 
     left: 50%;
-    /* Centraliza horizontalmente e verticalmente (do ponto 45%) */
     transform: translate(-50%, -50%); 
     
     color: #fffaf0;
@@ -236,7 +247,7 @@ body {
 
 /*
  * =========================================
- * ANIMAÇÕES
+ * ANIMAÇÕES (mantidas)
  * =========================================
 */
 @keyframes pulseText {
@@ -244,7 +255,7 @@ body {
     100% { opacity: 0.7; text-shadow: 0 0 14px rgba(255,255,255,0.9); }
 }
 
-/* Efeito de corte das faixas e ocultação da mensagem */
+/* Efeito de corte das faixas e ocultação da mensagem (mantido) */
 .gift-box.opened .gift-ribbon-left {
     transform: translateX(-50%) rotate(12deg) scaleY(0.6);
     opacity: 0;
@@ -264,7 +275,7 @@ body {
 
 /*
  * =========================================
- * RESPONSIVO
+ * RESPONSIVO (mantido)
  * =========================================
 */
 @media (max-width: 600px) {
