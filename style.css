@@ -188,7 +188,7 @@ body {
     transform: translateX(-50%);
     height: 100%;
     width: 12vw;
-    /* max-width removido para manter a largura original (grossa) no PC */
+    /* Mantendo a largura original (grossa) no PC */
     z-index: 10001;
 }
 
@@ -199,7 +199,7 @@ body {
     transform: translateY(-50%); 
     width: 100%;
     height: 12vw;
-    /* max-height removido para manter a altura original (grossa) no PC */
+    /* Mantendo a altura original (grossa) no PC */
     z-index: 10002;
     display: flex; 
     justify-content: center;
@@ -209,9 +209,9 @@ body {
 /* Texto central */
 .gift-box-message {
     position: absolute;
-    top: 45%;
+    top:45%;
     left: 50%;
-    /* Ajuste para subir o texto um pouco, menos que o -60% original */
+    /* AJUSTE FINAL: Centralizado horizontalmente, mas sutilmente para cima */
     transform: translate(-50%, -55%); 
     
     color: #fffaf0;
@@ -293,4 +293,3 @@ body {
         font-size: 1.8rem; 
     }
 }
-
