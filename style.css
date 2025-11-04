@@ -207,7 +207,7 @@ body {
 /* Texto central */
 .gift-box-message {
     position: absolute;
-    top: 46%; /* <--- AJUSTE PC: Move o ponto de âncora para cima */
+    top: 45%; /* <--- AJUSTE PC: Move o ponto de âncora para cima */
     left: 50%;
     /* Centraliza horizontalmente e verticalmente (do ponto 45%) */
     transform: translate(-50%, -50%); 
@@ -268,7 +268,7 @@ body {
         font-size: 1.8em; 
         white-space: nowrap; 
         /* CORREÇÃO MOBILE: Move o ponto de âncora para baixo para centralizar no celular */
-        top: 42%; /* <--- CORREÇÃO MOBILE */
+        top: 46%; /* <--- CORREÇÃO MOBILE */
     }
     
     /* Garante a mesma espessura para ambas as faixas no mobile */
