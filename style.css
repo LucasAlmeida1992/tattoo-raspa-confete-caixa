@@ -188,6 +188,7 @@ body {
     transform: translateX(-50%);
     height: 100%;
     width: 12vw;
+    /* max-width removido para manter a largura original (grossa) no PC */
     z-index: 10001;
 }
 
@@ -198,6 +199,7 @@ body {
     transform: translateY(-50%); 
     width: 100%;
     height: 12vw;
+    /* max-height removido para manter a altura original (grossa) no PC */
     z-index: 10002;
     display: flex; 
     justify-content: center;
@@ -209,8 +211,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* AJUSTE DE POSIÇÃO: Subindo o texto */
-    transform: translate(-50%, -60%); 
+    /* Ajuste para subir o texto um pouco, menos que o -60% original */
+    transform: translate(-50%, -55%); 
     
     color: #fffaf0;
     font-family: 'Oswald', sans-serif;
@@ -247,7 +249,7 @@ body {
     transform: translateY(-50%) rotate(-12deg) scaleX(0.6);
     opacity: 0;
 }
-.gift-box.opened .gift-box-message { /* AQUI ESTÁ O AJUSTE PARA O TEXTO SUMIR */
+.gift-box.opened .gift-box-message { 
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
