@@ -154,7 +154,8 @@ body {
     background: linear-gradient(145deg, #b32400, #751a00);
     z-index: 9999;
     overflow: hidden;
-    transition: opacity 1s ease-out;
+    /* CORREÇÃO 1: Redução de 1s para 0.4s */
+    transition: opacity 0.4s ease-out; 
     pointer-events: auto;
     box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
 }
@@ -178,7 +179,8 @@ body {
         inset 0 0 15px rgba(255,255,255,0.4),
         inset 0 0 30px rgba(0,0,0,0.4),
         0 0 20px rgba(0,0,0,0.6);
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    /* CORREÇÃO 2: Redução de 0.8s para 0.4s */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 /* Faixa Vertical */
@@ -249,7 +251,8 @@ body {
 }
 .gift-box.opened .gift-box-message { 
     opacity: 0;
-    transition: opacity 0.3s ease-out; /* Transição mais rápida */
+    /* CORREÇÃO 3: Removendo o tempo para desaparecer mais rápido */
+    transition: opacity 0s ease-out; 
 }
 .gift-box.opened {
     opacity: 0;
@@ -267,7 +270,7 @@ body {
         font-size: 1.8em; 
         white-space: nowrap; 
         /* CORREÇÃO MOBILE: Move o ponto de âncora para baixo para centralizar no celular */
-        top: 50%; /* <--- CORREÇÃO MOBILE */
+        top: 46%; /* <--- CORREÇÃO MOBILE */
     }
     
     /* Garante a mesma espessura para ambas as faixas no mobile */
